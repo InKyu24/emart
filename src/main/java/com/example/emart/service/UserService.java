@@ -4,13 +4,14 @@ import com.example.emart.dto.UserDTO;
 import com.example.emart.entity.Users;
 import com.example.emart.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.Optional;
 
 @Transactional(readOnly = true)
 @RequiredArgsConstructor
-public class UserService {
+public class UserService implements UserDetailsService {
   private final UserRepository userRepository;
 
   @Transactional
@@ -41,5 +42,19 @@ public class UserService {
       userRepository.save(user);
     }
     return user;
+  }
+
+  @Override
+  public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    Long id = Long.parseLong(username);
+    return userRepository.getUserInfoById(id).orElseThrow();
+  }
+
+  public Users login(String email, String password) {
+    Users user = getUserInfoByEmail(email);
+      if (user != null && user.getPassword().equals(password)) {
+        return user;
+      }
+    return null;
   }
 }

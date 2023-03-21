@@ -1,4 +1,4 @@
-package com.example.emart;
+package com.example.emart.config;
 
 import com.example.emart.repository.CartRepository;
 import com.example.emart.repository.EventRepository;

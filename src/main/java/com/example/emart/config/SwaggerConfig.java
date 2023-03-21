@@ -1,4 +1,4 @@
-package com.example.emart;
+package com.example.emart.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
