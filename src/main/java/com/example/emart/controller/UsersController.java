@@ -33,7 +33,7 @@ public class UsersController {
   }
 
   // 회원정보 변경
-  @PutMapping("/{id}")
+  @PatchMapping("/{id}")
   public Users changeUserInfo(@Valid @RequestBody UserDTO userDTO, @PathVariable Long id) {
     return userService.changeUserInfo(userDTO, id);
   }

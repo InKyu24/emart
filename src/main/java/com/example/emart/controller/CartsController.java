@@ -29,7 +29,7 @@ public class CartsController {
   }
 
   // 특정 사용자 장바구니에서 수량 업데이트
-  @PutMapping("/update/{id}")
+  @PatchMapping("/update/{id}")
   public Carts changeCartInfo(@RequestBody CartDTO cartDTO, @PathVariable Long id) {
     return cartService.changeCartQty(cartDTO.getQty(), id);
   }
