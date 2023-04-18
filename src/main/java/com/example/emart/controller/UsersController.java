@@ -1,4 +1,4 @@
-package com.example.emart.controller;
+package com.example.emart.controller.restController;
 
 import com.example.emart.config.JwtProvider;
 import com.example.emart.dto.UserDTO;

@@ -1,4 +1,4 @@
-package com.example.emart.controller;
+package com.example.emart.controller.restController;
 
 import com.example.emart.entity.Products;
 import com.example.emart.service.ProductService;
@@ -35,4 +35,5 @@ public class ProductController {
   public List<Products> getProductSearchList(@RequestParam String q) {
     return productService.getProductSearchList(q);
   }
+
 }

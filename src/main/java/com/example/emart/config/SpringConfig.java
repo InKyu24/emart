@@ -1,13 +1,7 @@
 package com.example.emart.config;
 
-import com.example.emart.repository.CartRepository;
-import com.example.emart.repository.EventRepository;
-import com.example.emart.repository.ProductRepository;
-import com.example.emart.repository.UserRepository;
-import com.example.emart.service.CartService;
-import com.example.emart.service.EventService;
-import com.example.emart.service.ProductService;
-import com.example.emart.service.UserService;
+import com.example.emart.repository.*;
+import com.example.emart.service.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -17,7 +11,7 @@ import javax.persistence.EntityManager;
 public class SpringConfig {
   private final EntityManager em;
 
-  public SpringConfig(EntityManager em) {
+  public SpringFilterConfig(EntityManager em) {
     this.em = em;
   }
 

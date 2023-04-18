@@ -1,10 +1,8 @@
-package com.example.emart.controller;
+package com.example.emart.controller.restController;
 
 import com.example.emart.dto.CartDTO;
-import com.example.emart.dto.UserDTO;
 import com.example.emart.entity.Carts;
 import com.example.emart.entity.Products;
-import com.example.emart.entity.Users;
 import com.example.emart.service.CartService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

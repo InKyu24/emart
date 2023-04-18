@@ -1,4 +1,4 @@
-package com.example.emart.controller;
+package com.example.emart.controller.restController;
 
 import com.example.emart.entity.Events;
 import com.example.emart.entity.Products;
