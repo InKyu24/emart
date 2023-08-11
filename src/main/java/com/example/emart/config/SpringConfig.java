@@ -11,7 +11,7 @@ import javax.persistence.EntityManager;
 public class SpringConfig {
   private final EntityManager em;
 
-  public SpringFilterConfig(EntityManager em) {
+  public SpringConfig(EntityManager em) {
     this.em = em;
   }
 

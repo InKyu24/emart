@@ -13,7 +13,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 @RequiredArgsConstructor
 @Configuration
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
+public class SecurityFilterConfig extends WebSecurityConfigurerAdapter {
 
   private final JwtProvider jwtProvider;
 
