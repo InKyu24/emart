@@ -18,7 +18,7 @@ public class EventService {
   }
 
   public List<Products> getEventProducts(Long id) {
-    Events event= eventRepository.getEvent(id);
+    Events event = eventRepository.getEvent(id);
     return eventRepository.getEventProducts(event);
   }
 }

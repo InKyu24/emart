@@ -23,6 +23,7 @@ public class UsersController {
   @PostMapping("/add")
   @ApiOperation(value = "회원가입")
   public Users addUser(@Valid @RequestBody UserDTO userDTO) {
+
     return userService.addUser(userDTO);
   }
 
